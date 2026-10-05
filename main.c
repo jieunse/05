@@ -3,18 +3,17 @@
 
 int main(int argc, char *argv[])
 {
-    int c;
-    int num = 0;
+    int x;
+    int i;
+    int sum = 0;
 
-    printf("Input characters : ");
+    printf("Input an integer :");
+    scanf("%d", &x);
 
-    while ((c = getchar()) != '\n')
-    {
-        if (c >= '0' && c <= '9')
-            num++;
-    }
+    for(i = 1; i <= x; i++)
+        sum = sum + i;
 
-    printf("The number of digit is %i.\n", num);
+    printf("sum is %i\n", sum);
 
     system("PAUSE");
     return 0;
