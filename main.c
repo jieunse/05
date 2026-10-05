@@ -3,15 +3,18 @@
 
 int main(int argc, char *argv[])
 {
-    int x;
+    int c;
+    int num = 0;
 
-    printf("Input an integer :");
-    scanf("%d", &x);
+    printf("Input characters : ");
 
-    if (x > 0)
-        printf("absoulte is %i.\n", x);
-    else
-        printf("absolute is %i.\n", -x);
+    while ((c = getchar()) != '\n')
+    {
+        if (c >= '0' && c <= '9')
+            num++;
+    }
+
+    printf("The number of digit is %i.\n", num);
 
     system("PAUSE");
     return 0;
